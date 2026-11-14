@@ -1,0 +1,24 @@
+version: "1"
+runtime: dummy
+roles:
+  - fullsend
+  - triage
+  - coder
+  - review
+  - retro
+  - prioritize
+agents:
+  - name: code
+    source: https://raw.githubusercontent.com/fullsend-ai/agents/171aac62881d20694170695e35c647c1f1e3c79d/harness/code.yaml#sha256=52c31b590b5137534f3a4f74aaa762ad517cd24fb99600a9a2158ae4b15950a0
+  - name: fix
+    source: https://raw.githubusercontent.com/fullsend-ai/agents/171aac62881d20694170695e35c647c1f1e3c79d/harness/fix.yaml#sha256=137aef4ed6e38a6a649b5a47f686d2c1b4cfcb18293bbbecec256b9fd03d113a
+  - name: prioritize
+    source: https://raw.githubusercontent.com/fullsend-ai/agents/171aac62881d20694170695e35c647c1f1e3c79d/harness/prioritize.yaml#sha256=416f990ea6fd3301fc499806825925782d7500872e0c76bdf1a79270e01a282c
+  - name: retro
+    source: https://raw.githubusercontent.com/fullsend-ai/agents/171aac62881d20694170695e35c647c1f1e3c79d/harness/retro.yaml#sha256=77bc71aa275e677003d2b04ea8073ea035824b77f582537e5b6e99b0de550bd8
+  - name: review
+    source: https://raw.githubusercontent.com/fullsend-ai/agents/171aac62881d20694170695e35c647c1f1e3c79d/harness/review.yaml#sha256=1a68bc24155d3c976c02590cc3b3bed469d51b41e227c602af324a8b2a4fe39a
+  - name: triage
+    source: https://raw.githubusercontent.com/fullsend-ai/agents/171aac62881d20694170695e35c647c1f1e3c79d/harness/triage.yaml#sha256=82d6dba086263b3b0e8bb38b3f6fdd8ec41be8bca846ab42af7779b38fd09e15
+allowed_remote_resources:
+  - https://raw.githubusercontent.com/fullsend-ai/agents/
